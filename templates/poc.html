@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Graph with Node-Edge Navigation and JSON Details</title>
+    <script src="https://unpkg.com/vis-network@9.1.0/dist/vis-network.min.js"></script>
+    <script type="module" src="{{ url_for('static', filename='js/network.js') }}"></script> <!-- Main module file -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/poc.css') }}">
+</head>
+<body>
+
+<h2>Graph Visualization with Node-Edge Navigation and JSON Details</h2>
+<div id="container">
+    <div class="sidebar" id="nodeList">
+        <h3>Nodes</h3>
+        <ul id="nodesList"></ul>
+    </div>
+
+    <div id="graphContainer">
+        <h3>Graph</h3>
+        <div id="network"></div>
+    </div>
+
+    <div id="edgeDetails">
+        <h3>Details (JSON)</h3>
+        <div id="jsonOutput">Click on a node or edge to view details.</div>
+    </div>
+</div>
+
+<div id="edgeTable">
+    <h3>Edges Table</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Edge ID</th>
+                <th>From</th>
+                <th>To</th>
+            </tr>
+        </thead>
+        <tbody id="edgesTableBody"></tbody>
+    </table>
+</div>
+
+</body>
+</html>

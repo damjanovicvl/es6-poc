@@ -1,0 +1,68 @@
+/* Layout styles */
+#container {
+    display: flex;
+    height: 600px;
+}
+.sidebar {
+    width: 200px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    overflow-y: auto;
+    height: 100vh;
+    box-sizing: border-box;
+}
+#nodeList, #edgeDetails, #graphContainer, #edgeTable {
+    padding: 15px;
+    border: 1px solid lightgray;
+    overflow-y: auto;
+}
+#nodeList {
+    width: 200px;
+}
+#edgeDetails {
+    width: 250px;
+}
+#graphContainer {
+    flex-grow: 1;
+    min-width: 400px;
+    height: 100%;
+}
+#network {
+    width: 100%;
+    height: 100%;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.node-item, .edge-item {
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    background-color: #e0e0e0; /* Default gray background */
+}
+.node-item:hover,
+.edge-item:hover {
+    background-color: #d0e0f0; /* Highlight color for hover */
+}
+.node-item.expanded {
+    background-color: transparent;
+}
+#jsonOutput {
+    white-space: pre-wrap;
+    font-size: 14px;
+    margin-top: 10px;
+}
+#edgeTable table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#edgeTable th, #edgeTable td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+#edgeTable tr:hover {
+    background-color: #f0f0f0;
+}
